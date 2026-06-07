@@ -1,0 +1,170 @@
+/* ARKA PLAN */
+body {
+  font-family: system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background: radial-gradient(circle at top, #1e1b4b, #020617);
+  color: #e5e7eb;
+}
+
+/* INPUT */
+#datetime-picker {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: #e5e7eb;
+  outline: none;
+}
+
+/* BUTTON */
+button[data-start] {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+
+  background: #22c55e;
+  color: #0b1220;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+button[data-start]:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+}
+
+button[data-start]:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* TIMER */
+.timer {
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+/* BOX */
+.field {
+  width: 95px;
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* neon glow line */
+.field::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: #22c55e;
+  transition: 0.4s ease;
+}
+
+.field:hover::before {
+  left: 0;
+}
+
+/* hover effect */
+.field:hover {
+  transform: translateY(-6px);
+  border-color: #22c55e;
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+}
+
+/* NUMBERS */
+.value {
+  font-size: 36px;
+  font-weight: 800;
+  color: #22c55e;
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+}
+
+/* LABEL */
+.label {
+  font-size: 11px;
+  margin-top: 4px;
+  opacity: 0.7;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+button[data-start] {
+  margin-top: 10px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(34, 197, 94, 0.4);
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #07120c;
+
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover yükselme */
+button[data-start]:hover:not(:disabled) {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+}
+
+/* click hissi */
+button[data-start]:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+/* glow sweep efekti */
+button[data-start]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transition: 0.5s;
+}
+
+button[data-start]:hover::before {
+  left: 120%;
+}
+
+/* disabled hali */
+button[data-start]:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+

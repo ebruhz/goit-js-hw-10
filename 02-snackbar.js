@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";/* empty css                      */import{i as o}from"./assets/vendor-BbbuE1sJ.js";o.settings({timeout:3e3,position:"topRight",transitionIn:"fadeInDown",transitionOut:"fadeOutUp",backgroundColor:"#0f172a",titleColor:"#22c55e",messageColor:"#e5e7eb",progressBarColor:"#22c55e",iconColor:"#22c55e",close:!1});const t=document.querySelector(".form");t.addEventListener("submit",onSubmit);
+//# sourceMappingURL=02-snackbar.js.map
